@@ -35,3 +35,20 @@ Total input/output data: 1444.94 MB
 
 Time: 172 ms (5.81 it/s)
 Bandwidth: 8395 MB/s
+
+## Results mi300
+
+### Flash Attention 2
+
+Instructions to reproduce are in FA2-repro.md
+
+Problem size: (16x16384x128xf16, 16x16384x128xf16, 16x16384x128xf16) -> (16x16384x128xf16)
+Total input/output data: 256 MB
+
+Time: 12 ms (83.333 it/s)
+Bandwidth: 21333.3 MB/s
+
+ISA: fa2.rocasm
+Pre-LLVM MLIR: fa2-pre-llvm.mlir
+
+Accuracy (error): 0.0045776
