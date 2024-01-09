@@ -2,7 +2,7 @@
 
 Date: 2024-01-08
 
-Author: Jakub Kuderski
+Author: Jakub Kuderski, Kunwar Grover
 
 ## Results vulkan-ubuntu-7900xtx
 
