@@ -37,8 +37,10 @@ Author: Jakub Kuderski
 - Command: `run.sh ~/iree/build/relass vmt.mlir rocm://0 512`
 - Problem size: (1x4096xf16, 32000x4096xf16) -> 1x32000xf16
 - Total input/output data: 262.22 MB
-- Time: 73 us (13635 it/s)
-- Bandwidth: 3575 MB/s
+- Time: 69 us (14448 it/s)
+- Bandwidth: 3788 MB/s
+- ISA: [vmt.rocasm](vmt_int4.rocmasm)
+- Pre-LLVM MLIR: [vmt-pre-llvm.mlir](vmt-pre-llvm.mlir)
 
 ### VMT + dequant
 
@@ -47,6 +49,8 @@ Author: Jakub Kuderski
 - Total input/output data: 8.9 MB
 - Time: 10 us (98404 it/s)
 - Bandwidth: 876 MB/s
+- ISA: [vmt_int4.rocasm](vmt_int4.rocmasm)
+- Pre-LLVM MLIR: [vmt-int4-pre-llvm.mlir](vmt-int4-pre-llvm.mlir)
 
 ### MMT
 
@@ -55,6 +59,8 @@ Author: Jakub Kuderski
 - Total input/output data: 1444.94 MB
 - Time: 386 ms (2.59 it/s)
 - Bandwidth: 3742 MB/s
+- ISA: [mmt.rocasm](mmt.rocmasm)
+- Pre-LLVM MLIR: [mmt-pre-llvm.mlir](mmt-pre-llvm.mlir)
 
 ### Flash Attention 2
 
@@ -64,6 +70,6 @@ Instructions to reproduce are in [FA2-repro.md](FA2-repro.md).
 - Total input/output data: 256 MB
 - Time: 12 ms (83.333 it/s)
 - Bandwidth: 21333.3 MB/s
-- ISA: fa2.rocasm
-- Pre-LLVM MLIR: fa2-pre-llvm.mlir
 - Accuracy (error): 0.0045776
+- ISA: [fa2.rocasm](fa2.rocmasm)
+- Pre-LLVM MLIR: [fa2-pre-llvm.mlir](fa2-pre-llvm.mlir)
